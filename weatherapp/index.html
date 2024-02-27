@@ -39,8 +39,8 @@
 
 
     <script>
-        const apiKey = "5002d0c901189188ab2e9e428b0a6176";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metrics&q=banglore";
+        const apiKey = procss.env.apiKey;
+        const apiUrl = process.env.apiUrl;
         async function checkWeather(){
             const response = await fetch(apiUrl+`&appid=${apiKey}`);
             var data = await response.json();
